@@ -15,6 +15,10 @@ public interface BrowserstackConfig extends Config {
 
     String url();
 
+    String appUrl();
+
+    String videoUrl();
+
     String device();
 
     String os_version();
