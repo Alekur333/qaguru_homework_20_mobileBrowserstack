@@ -1,4 +1,4 @@
-package kur.alexei.tests;
+package kur.alexei.tests.samples;
 
 import io.appium.java_client.MobileBy;
 import io.appium.java_client.ios.IOSDriver;
@@ -16,12 +16,14 @@ public class BrowserStackIosSampleTests {
 
 
     @Test
+    @Disabled
     void searchTest() throws MalformedURLException, InterruptedException {
+
         DesiredCapabilities caps = new DesiredCapabilities();
 
         // Set your access credentials
-        caps.setCapability("browserstack.user", "stanislavvasenko_VbIEGO");
-        caps.setCapability("browserstack.key", "gzMbXq5ts4MJPnZs7jKK");
+        caps.setCapability("browserstack.user", "qaguru_B5xciN");
+        caps.setCapability("browserstack.key", "TzFxj7ss7siMKTxUURLy");
 
         // Set URL of the application under test
         caps.setCapability("app", "bs://444bd0308813ae0dc236f8cd461c02d3afa7901d");

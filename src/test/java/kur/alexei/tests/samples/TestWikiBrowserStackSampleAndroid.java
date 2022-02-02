@@ -1,9 +1,11 @@
-package kur.alexei.tests;
-
+package kur.alexei.tests.samples;
+//TestWikiBrowserStackSampleAndroid
 
 import io.appium.java_client.MobileBy;
 import io.appium.java_client.android.AndroidDriver;
 import io.appium.java_client.android.AndroidElement;
+import org.junit.jupiter.api.Disabled;
+import org.junit.jupiter.api.Test;
 import org.openqa.selenium.remote.DesiredCapabilities;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
@@ -12,15 +14,17 @@ import java.net.MalformedURLException;
 import java.net.URL;
 import java.util.List;
 
+public class TestWikiBrowserStackSampleAndroid {
 
-public class BrowserStackAndroidSampleTests {
-    public static void main(String[] args) throws MalformedURLException, InterruptedException {
+    @Test
+    @Disabled
+    void searchTest() throws MalformedURLException, InterruptedException {
 
         DesiredCapabilities caps = new DesiredCapabilities();
 
         // Set your access credentials
-        caps.setCapability("browserstack.user", "stanislavvasenko_VbIEGO");
-        caps.setCapability("browserstack.key", "gzMbXq5ts4MJPnZs7jKK");
+        caps.setCapability("browserstack.user", "qaguru_B5xciN");
+        caps.setCapability("browserstack.key", "TzFxj7ss7siMKTxUURLy");
 
         // Set URL of the application under test
         caps.setCapability("app", "bs://c700ce60cf13ae8ed97705a55b8e022f13c5827c");
@@ -31,7 +35,7 @@ public class BrowserStackAndroidSampleTests {
 
         // Set other BrowserStack capabilities
         caps.setCapability("project", "First Java Project");
-        caps.setCapability("build", "Java Android");
+        caps.setCapability("build", "browserstack-build-1");
         caps.setCapability("name", "first_test");
 
 
@@ -39,7 +43,6 @@ public class BrowserStackAndroidSampleTests {
         // and desired capabilities defined above
         AndroidDriver<AndroidElement> driver = new AndroidDriver<AndroidElement>(
                 new URL("http://hub.browserstack.com/wd/hub"), caps);
-
 
         // Test case for the BrowserStack sample Android app.
         // If you have uploaded your app, update the test case here.
